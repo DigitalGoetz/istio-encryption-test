@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inspector
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: inspector
+  template:
+    metadata:
+      labels:
+        app: inspector
+    spec:
+      containers:
+        - name: inspector
+          image: digitalgoetz/inspector:1.0.1
+          imagePullPolicy: Always
+          resources:
+            limits:
+              memory: 512Mi
+              cpu: 1000m
