@@ -35,6 +35,6 @@ Using the Inspector pod to cUrl the Argus Retriever's endpoints (also while in t
 
 ## Usage
 
-TBD
+
 
 
